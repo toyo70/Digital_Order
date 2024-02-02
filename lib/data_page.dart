@@ -14,22 +14,9 @@ class DataSpace {
         displayName.add(item);
       }
     }
-    // print(displayName);
   }
 
   List<String> displayName = [];
-  // List<String> displayName = [
-  //   "ハンバーガー",
-  //   "トマトバーガー",
-  //   "チーズバーガー",
-  //   "ダブルチーズバーガー",
-  //   "コーラ",
-  //   "オレンジ",
-  //   "アップル",
-  //   "ポテト",
-  //   "オニオンリング",
-  //   "ナゲット"
-  // ];
 
   // List<int> displayNameIndex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -74,30 +61,9 @@ class DataSpace {
   }
 
   //注文履歴
-  List<List<int>> orderHistory = [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-  ];
+  List<List<int>> orderHistory = [[], [], [], [], [], [], [], []];
   //注文商品の名前保持
-  List<List<String>> orderHistoryName = [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-  ];
-
-  //会計
-  // List<int> counting = [0, 0, 0, 0, 0, 0, 0, 0];
+  List<List<String>> orderHistoryName = [[], [], [], [], [], [], [], []];
 
   DateTime getDate() {
     DateTime now = DateTime.now();
@@ -108,12 +74,6 @@ class DataSpace {
   void delProduct(int table, int index) {
     orderHistory[table].remove(searchIndex(displayName[index]) - 1);
     orderHistoryName[table].remove(displayName[index]);
-    // print(table);
-    // print(displayName[index]);
-    // print(searchIndex(displayName[index]));
-    // print();
-    // print(orderHistory[0]);
-    // print(orderHistoryName[0]);
   }
 
   void resetDatabase() {
@@ -138,15 +98,10 @@ class DataSpace {
   //商品追加
   void addProduct(int table, int index) {
     orderHistory[table].add(index);
-    // print(table);
-    // print(timeValue);
-    // orderHistory[0];
   }
 
   void addProductName(int table, String name) {
     orderHistoryName[table].add(name);
-    // print(table);
-    // print(name);
   }
 
   //商品価格
@@ -157,7 +112,7 @@ class DataSpace {
   ];
   static int tSelect = 0;
   static List<int> total = [0, 0, 0, 0, 0, 0, 0, 0];
-  List<String> cName = [
+  static List<String> cName = [
     "スティーブ",
     "イーロン",
     "ティム",
