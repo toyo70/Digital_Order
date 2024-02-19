@@ -5,6 +5,7 @@
 また、データベースや決済サービスと連係することにより、
 さらに会計をスマートにし、その後の売上確認などにも貢献します。
 
+Hosting URL https://digital-order-6184d.web.app
 
 ## Getting Started
 
